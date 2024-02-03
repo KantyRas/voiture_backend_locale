@@ -1,14 +1,32 @@
 package com.example.springsecurity.dto;
 
-import com.example.springsecurity.user.Role;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
+import com.example.springsecurity.user.User;
 
 public class UserDTO {
-    private Integer id;
-    private String firstname;
-    private String lastname;
-    private String email;
-    private String password;
-    private String role;
+    String token;
+    User user;
+
+    public UserDTO() {
+    }
+
+    public UserDTO(String token, User user) {
+        this.token = token;
+        this.user = user;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
 }
