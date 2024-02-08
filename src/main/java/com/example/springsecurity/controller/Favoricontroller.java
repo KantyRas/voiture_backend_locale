@@ -29,4 +29,9 @@ public class Favoricontroller {
         favoriservice.insererfavori(favori);
         return "favori";
     }
+    @DeleteMapping("/favori/{idfavori}")
+    public String supprimerAnnonce(@PathVariable int idfavori) {
+        favoriservice.deletefavori(idfavori);
+        return "delete";
+    }
 }

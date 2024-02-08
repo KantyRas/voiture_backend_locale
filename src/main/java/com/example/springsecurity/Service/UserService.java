@@ -15,4 +15,7 @@ public class UserService {
     public List<User> getAllUser(){
         return userRepository.findAll();
     }
+    public List<User> is_Logged(int iduser){
+        return userRepository.getUserLogged(iduser);
+    }
 }

@@ -9,21 +9,16 @@ public class Favori {
     @GeneratedValue(strategy = GenerationType.AUTO)
     int idfavori;
 
-    @ManyToOne
-    @JoinColumn(name = "idannonce")
-    Annonce annonce;
-
-    @ManyToOne
-    @JoinColumn(name = "idutilisateur")
-    User utilisateur;
+    int idannonce;
+    int idutilisateur;
 
     public Favori() {
     }
 
-    public Favori(int idfavori, Annonce annonce, User utilisateur) {
+    public Favori(int idfavori, int idannonce, int idutilisateur) {
         this.idfavori = idfavori;
-        this.annonce = annonce;
-        this.utilisateur = utilisateur;
+        this.idannonce = idannonce;
+        this.idutilisateur = idutilisateur;
     }
 
     public int getIdfavori() {
@@ -34,19 +29,19 @@ public class Favori {
         this.idfavori = idfavori;
     }
 
-    public Annonce getAnnonce() {
-        return annonce;
+    public int getIdannonce() {
+        return idannonce;
     }
 
-    public void setAnnonce(Annonce annonce) {
-        this.annonce = annonce;
+    public void setIdannonce(int idannonce) {
+        this.idannonce = idannonce;
     }
 
-    public User getUtilisateur() {
-        return utilisateur;
+    public int getIdutilisateur() {
+        return idutilisateur;
     }
 
-    public void setUtilisateur(User utilisateur) {
-        this.utilisateur = utilisateur;
+    public void setIdutilisateur(int idutilisateur) {
+        this.idutilisateur = idutilisateur;
     }
 }

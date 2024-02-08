@@ -10,4 +10,5 @@ public interface Favoriservice {
     public Favori insererfavori(Favori favori);
 
     public List<Favori>  getfavori(int idutilisateur);
+    public  void deletefavori(int idfavori);
 }

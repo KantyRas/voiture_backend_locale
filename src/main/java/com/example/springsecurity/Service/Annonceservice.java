@@ -20,4 +20,6 @@ public interface Annonceservice {
     public void updateEtat(int annonceId, int newEtat);
 
     public void updatevalidation(int annonceId, int newvalidation);
+
+    List<Annonce> findbyidannonce(int idannonce);
 }

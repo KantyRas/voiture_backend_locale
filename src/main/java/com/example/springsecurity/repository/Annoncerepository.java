@@ -19,4 +19,6 @@ public interface Annoncerepository extends JpaRepository<Annonce,Integer> {
     @Query("SELECT a FROM Annonce a WHERE a.prix BETWEEN :minPrix AND :maxPrix or a.idmarque= :idmarque  or a.modele=:modele or a.idcategorie= :idcategorie")
     List<Annonce> recherche(double minPrix,double maxPrix,int idmarque,String modele,int idcategorie);
 
+    @Query("Select a From Annonce a where a.idannonce= :idannonce")
+    List<Annonce> findbyidannonce(int idannonce);
 }

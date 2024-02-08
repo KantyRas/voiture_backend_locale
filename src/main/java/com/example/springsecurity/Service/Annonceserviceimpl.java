@@ -55,4 +55,9 @@ public class Annonceserviceimpl implements Annonceservice {
     public void updatevalidation(int annonceId, int newvalidation) {
         validationannoncerepo.updatevalidation(annonceId, newvalidation);
     }
+
+    @Override
+    public List<Annonce> findbyidannonce(int idannonce) {
+        return annoncerepository.findbyidannonce(idannonce);
+    }
 }

@@ -49,6 +49,11 @@ public class Annoncecontroller {
         return annoncesservice.recherchemultiple(minPrix, maxPrix, idmarque, modele, idcategorie);
     }
 
+    @GetMapping("/detail_annonce/{idannonce}")
+    public List<Annonce> findbyidannonce(@PathVariable int idannonce){
+        return annoncesservice.findbyidannonce(idannonce);
+    }
+
     @PatchMapping("/{id}/vendu")
     public ResponseEntity<String> updateEtat(@PathVariable("id") int annonceId, @RequestParam("newEtat") int newEtat) {
         annoncesservice.updateEtat(annonceId, newEtat);

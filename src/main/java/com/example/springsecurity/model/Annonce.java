@@ -4,6 +4,7 @@ import com.example.springsecurity.user.User;
 import jakarta.persistence.*;
 
 import java.sql.Date;
+import java.util.List;
 
 @Entity
 public class Annonce {
